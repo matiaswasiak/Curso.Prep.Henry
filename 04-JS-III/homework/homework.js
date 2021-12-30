@@ -237,15 +237,10 @@ function mesesDelAño(array) {
     }
   }
 
-  for (let j = 0; j < array.length; j++) {
-    if (
-      meses[j] !== "Enero" ||
-      meses[j] !== "Marzo" ||
-      meses[j] !== "Noviembre"
-    ) {
-      return "No se encontraron los meses pedidos";
-    }
+  if (meses.length < 3) {
+    return "No se encontraron los meses pedidos";
   }
+
   return meses;
 }
 
@@ -253,6 +248,16 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+
+  nuevoArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > 100) {
+      nuevoArray.push(array[i]);
+    }
+  }
+
+  return nuevoArray;
 }
 
 function breakStatement(numero) {
@@ -263,6 +268,37 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+
+  let i = 0;
+
+  numerosMas2 = [];
+
+  do {
+    if (numero < 0) {
+      return "Se interrumpió la ejecución";
+    }
+    numerosMas2.push((numero += 2));
+    i++;
+  } while (i < 10);
+
+  return numerosMas2;
+
+  // Henry solution
+  // var array = [];
+  // var suma = numero;
+  // for(var i= 0; i<10; i++) {
+  //   suma = suma + 2;
+  //   if(suma === i) break;
+  //   else {
+  //     array.push(suma);
+  //   }
+  // }
+  // if(i < 10) {
+  //   return 'Se interrumpió la ejecución';
+  // }
+  // else {
+  //     return array;
+  // }
 }
 
 function continueStatement(numero) {
@@ -272,6 +308,31 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+
+  let i = 0;
+  numerosMas2 = [];
+
+  do {
+    i++;
+    if (i === 5) continue;
+    numerosMas2.push((numero += 2));
+  } while (i < 10);
+
+  return numerosMas2;
+
+  // Henry solution
+  // let array = [];
+  // let suma = numero;
+
+  // for (let i = 0; i < 10; i++) {
+  //   if (i === 5) continue;
+  //   else {
+  //     suma = suma + 2;
+  //     array.push(suma);
+  //   }
+  // }
+
+  // return array;
 }
 
 // No modificar nada debajo de esta línea
