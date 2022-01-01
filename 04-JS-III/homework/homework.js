@@ -269,6 +269,24 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
 
+  // Ayuda a Andrea
+  // var array = [];
+  // let i = 0;
+
+  // for (; i < 10; i++) {
+  //   numero = numero + 2;
+  //   if (numero === i) break;
+  //   else {
+  //     array.push(numero);
+  //   }
+  // }
+
+  // if (i != numero) {
+  //   return array;
+  // } else {
+  //   return "Se interrumpió la ejecución";
+  // }
+
   let i = 0;
 
   numerosMas2 = [];
